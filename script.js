@@ -164,7 +164,6 @@ var markers = [
     text: 'San Francisco: What a fun trip! I hope we go back soon',
     images: [
       'san_fran/SanFran1.jpeg',
-      'san_fran/SanFran2.jpeg',
       'san_fran/SanFran3.jpeg',
       'san_fran/SanFran4.jpeg',
       'san_fran/SanFran5.jpeg',
