@@ -1,35 +1,35 @@
 /* General Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5; /* Neutral background for less pink */
-    color: #333;
+    background-color: #333; /* Dark gray background */
+    color: #f0f0f0; /* Light text color for contrast */
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 header {
-    background-color: #455a64; /* A cool, contrasting blue-gray */
+    background-color: #455a64; /* Dark blue-gray for the header */
     padding: 20px;
     font-size: 2em;
-    color: #ffa726;
+    color: #ffa726; /* Bright orange text */
 }
 
 #map-container {
     width: 100%;
     height: 70vh;
     margin: 20px auto;
-    border: 2px solid #bdbdbd; /* Subtle gray border */
+    border: 2px solid #000; /* Black border around the map */
     border-radius: 15px;
 }
 
 .memory-popup {
-    background-color: #fff;
+    background-color: #2a2a2a; /* Dark background for the popups */
     border-radius: 10px;
     padding: 15px;
     max-width: 300px;
     text-align: left;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.5s ease;
@@ -44,20 +44,20 @@ header {
 .custom-div-icon .marker-pin {
     width: 20px;
     height: 20px;
-    background-color: #ea674a; /* Keep the bright marker for visibility */
+    background-color: rgb(154, 43, 18); /* Deep reddish-brown marker */
     border-radius: 50%;
     border: 2px solid white;
     position: absolute;
     transform: translate(-50%, -50%);
-    animation: pulse 2s infinite;  /* Bring back the pulse animation */
+    animation: pulse 2s infinite;  /* Pulse animation for the marker */
 }
 
 /* Polaroid-style popups */
 .polaroid {
-    background: white;
+    background: #333; /* Dark background for the polaroid */
     padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #555;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for dark theme */
     text-align: center;
     width: 150px;
     position: relative;
@@ -65,13 +65,13 @@ header {
 
 .polaroid img {
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
 }
 
 .polaroid .note {
     margin-top: 10px;
     font-style: italic;
-    color: #333;
+    color: #f0f0f0; /* Light text for readability */
 }
 
 /* Pulse animation for marker icons */
@@ -111,7 +111,7 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #ffa726;
+    background-color: #ffa726; /* Bright orange buttons */
     color: white;
     border: none;
     padding: 5px;
@@ -129,11 +129,53 @@ header {
 }
 
 .prev-btn:hover, .next-btn:hover {
-        background-color: #ff7043;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
-    transform: scale(1.05); /* Slightly enlarges buttons on hover */
+    background-color: #ff7043;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
     transition: all 0.3s ease;
 }
+
+/* Leaflet Zoom Control Customization */
+.leaflet-control-zoom {
+    background-color: #333 !important; /* Match the header/footer background */
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) !important; /* Subtle shadow for buttons */
+    overflow: hidden !important;
+}
+
+.leaflet-control-zoom a {
+    background-color: #333 !important; /* Bright orange zoom buttons */
+    color: white !important;
+    display: block !important;
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    text-align: center !important;
+    font-size: 1.5em !important;
+    border: none !important;
+    border-bottom: 1px solid #455a64 !important;
+}
+
+.leaflet-control-zoom a:last-child {
+    border-bottom: none !important; /* Remove bottom border for the last button */
+}
+
+.leaflet-control-zoom a:hover {
+    background-color: #ff7043 !important; /* Darker orange on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) !important; /* Slight shadow on hover */
+    transform: scale(1.05) !important; /* Slight enlargement on hover */
+    transition: all 0.3s ease !important;
+}
+
+.leaflet-container .leaflet-popup-content-wrapper, 
+.leaflet-container .leaflet-popup-tip {
+    background: #333 !important; /* Dark background */
+    color: #f0f0f0 !important;   /* Light text color */
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4) !important; /* Dark shadow */
+}
+
+
 
 /* Responsive Design for Mobile */
 @media (max-width: 600px) {
@@ -165,8 +207,8 @@ header {
 /* Footer */
 .footer {
     padding: 20px;
-    background-color: #455a64; /* Matches the header */
-    color: #ffa726;
+    background-color: #455a64; /* Dark blue-gray to match the header */
+    color: #ffa726; /* Bright orange text for footer */
     position: fixed;
     width: 100%;
     bottom: 0;
